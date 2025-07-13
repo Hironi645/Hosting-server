@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOA IBU HOSTING - Hosting Premium dengan Berkah Ibu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5e35b1;
+            --secondary: #3949ab;
+            --accent: #7c4dff;
+            --gold: #ffc107;
+            --text: #2d3748;
+            --text-light: #4a5568;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-weight: 400;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>');
+            background-size: cover;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            position: relative;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .tagline {
+            background: rgba(255, 255, 255, 0.15);
+            display: inline-block;
+            padding: 8px 25px;
+            border-radius: 30px;
+            margin-top: 20px;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+            position: relative;
+            font-size: 0.95rem;
+        }
+        
+        .pricing {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .pricing-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            width: 280px;
+            padding: 35px 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-card.popular {
+            border: 2px solid var(--gold);
+        }
+        
+        .pricing-card.popular::after {
+            content: "POPULER";
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: var(--gold);
+            color: #333;
+            padding: 4px 35px;
+            font-weight: 600;
+            transform: rotate(45deg);
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .price {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin: 20px 0;
+            color: var(--secondary);
+            line-height: 1.2;
+        }
+        
+        .price span {
+            font-size: 0.95rem;
+            opacity: 0.7;
+            font-weight: 400;
+        }
+        
+        .negotiable {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .features {
+            list-style: none;
+            margin: 25px 0;
+        }
+        
+        .features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+        
+        .features li i {
+            margin-right: 12px;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 15px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(94, 53, 177, 0.3);
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(to right, #25D366, #128C7E);
+        }
+        
+        .btn-whatsapp:hover {
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+        
+        .contact {
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin: 60px 0;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .contact p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px 30px;
+            background: rgba(94, 53, 177, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s;
+            border: 1px solid rgba(94, 53, 177, 0.1);
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            background: rgba(94, 53, 177, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-item i {
+            font-size: 1.6rem;
+            color: var(--primary);
+        }
+        
+        .contact-item div h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 3px;
+            color: var(--text);
+        }
+        
+        .contact-item div p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 20px 20px 0 0;
+            margin-top: 80px;
+        }
+        
+        footer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        footer p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .highlight {
+            background: linear-gradient(to right, #ffeb3b, #ffc107);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+            
+            .pricing {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+            
+            .pricing-card {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .contact {
+                padding: 30px 20px;
+            }
+            
+            .contact-item {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>DOA IBU HOSTING</h1>
+            <p>Hosting premium dengan berkah doa ibu untuk kesuksesan online Anda</p>
+            <div class="tagline">Uptime 99.9% • Support 24/7 • Garansi Kepuasan</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="pricing">
+            <div class="pricing-card">
+                <h3>Paket Biasa</h3>
+                <div class="price">Rp50k <span>/bulan</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> 1GB SSD Storage</li>
+                    <li><i class="fas fa-check-circle"></i> 10GB Bandwidth</li>
+                    <li><i class="fas fa-check-circle"></i> 1 Website</li>
+                    <li><i class="fas fa-check-circle"></i> 5 Akun Email</li>
+                    <li><i class="fas fa-check-circle"></i> SSL Gratis</li>
+                </ul>
+                <a href="https://wa.me/6282157298268?text=Saya%20tertarik%20memesan%20Paket%20Biasa%20DOA%20IBU%20HOSTING" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                </a>
+            </div>
+            
+            <div class="pricing-card popular">
+                <h3>Paket Normal</h3>
+                <div class="price">Rp150k <span>/bulan</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> 5GB SSD Storage</li>
+                    <li><i class="fas fa-check-circle"></i> Unlimited Bandwidth</li>
+                    <li><i class="fas fa-check-circle"></i> 5 Website</li>
+                    <li><i class="fas fa-check-circle"></i> Unlimited Email</li>
+                    <li><i class="fas fa-check-circle"></i> SSL + CDN Gratis</li>
+                </ul>
+                <a href="https://wa.me/6282157298268?text=Saya%20tertarik%20memesan%20Paket%20Normal%20DOA%20IBU%20HOSTING" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                </a>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Paket Super</h3>
+                <div class="price">Rp200k <span>/bulan</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> 10GB SSD Storage</li>
+                    <li><i class="fas fa-check-circle"></i> Unlimited Premium BW</li>
+                    <li><i class="fas fa-check-circle"></i> Unlimited Website</li>
+                    <li><i class="fas fa-check-circle"></i> Unlimited Email</li>
+                    <li><i class="fas fa-check-circle"></i> SSL + CDN + Backup</li>
+                </ul>
+                <a href="https://wa.me/6282157298268?text=Saya%20tertarik%20memesan%20Paket%20Super%20DOA%20IBU%20HOSTING" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                </a>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Paket Super Kencang</h3>
+                <div class="price">Rp800k <span>/bulan</span></div>
+                <div class="negotiable">*Harga bisa ditawar</div>
+                <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> 50GB NVMe Storage</li>
+                    <li><i class="fas fa-check-circle"></i> Unlimited Premium BW</li>
+                    <li><i class="fas fa-check-circle"></i> Unlimited Website</li>
+                    <li><i class="fas fa-check-circle"></i> Priority Support 24/7</li>
+                    <li><i class="fas fa-check-circle"></i> Semua Fitur Premium</li>
+                </ul>
+                <a href="https://wa.me/6282157298268?text=Saya%20tertarik%20memesan%20Paket%20Super%20Kencang%20DOA%20IBU%20HOSTING%20dan%20ingin%20menawar" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Pesan & Tawar
+                </a>
+            </div>
+        </div>
+        
+        <div class="contact">
+            <h2>Butuh Bantuan atau Informasi Lebih Lanjut?</h2>
+            <p>Tim support kami siap membantu Anda 24 jam sehari melalui WhatsApp dan Email dengan respon cepat dan ramah.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p>+62 821-5729-8268</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hironimusposen49@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <h3>DOA IBU HOSTING</h3>
+            <p>Hosting dengan <span class="highlight">berkah doa ibu</span> untuk kesuksesan online Anda</p>
+            <p>&copy; 2023 DOA IBU HOSTING. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+</body>
+  </html>
