@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Pendapatan - DOA IBU HOSTING</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #7b2cbf;
+            --secondary: #9d4edd;
+            --accent: #c77dff;
+            --text: #2b2d42;
+            --text-light: #6c757d;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .report-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text);
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(123, 44, 191, 0.2);
+        }
+        
+        .btn {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(123, 44, 191, 0.3);
+        }
+        
+        .btn i {
+            margin-right: 10px;
+        }
+        
+        .info-note {
+            margin-top: 30px;
+            padding: 15px;
+            background: rgba(123, 44, 191, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 30px auto;
+            }
+            
+            .report-card {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="report-card">
+            <h1><i class="fas fa-chart-line"></i> Laporan Pendapatan</h1>
+            
+            <form id="incomeForm" action="https://formspree.io/f/hironimusposen49@gmail.com" method="POST">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukkan nama Anda">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="email@contoh.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="tanggal">Tanggal Laporan</label>
+                    <input type="date" id="tanggal" name="tanggal" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="periode">Periode Laporan</label>
+                    <select id="periode" name="periode" required>
+                        <option value="">Pilih periode...</option>
+                        <option value="harian">Harian</option>
+                        <option value="mingguan">Mingguan</option>
+                        <option value="bulanan">Bulanan</option>
+                        <option value="tahunan">Tahunan</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="jumlah">Jumlah Pendapatan (Rp)</label>
+                    <input type="number" id="jumlah" name="jumlah" required placeholder="1000000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="keterangan">Keterangan (Opsional)</label>
+                    <textarea id="keterangan" name="keterangan" rows="4" placeholder="Tambahkan catatan jika perlu..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn">
+                    <i class="fas fa-paper-plane"></i> Kirim Laporan
+                </button>
+            </form>
+            
+            <div class="info-note">
+                <p><strong>Catatan:</strong> Laporan akan dikirim ke email admin dan Anda akan menerima salinannya. Pastikan data yang dimasukkan sudah benar.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('incomeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validasi form
+            const nama = document.getElementById('nama').value;
+            const email = document.getElementById('email').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const periode = document.getElementById('periode').value;
+            const jumlah = document.getElementById('jumlah').value;
+            
+            if(!nama || !email || !tanggal || !periode || !jumlah) {
+                alert('Harap lengkapi semua field yang wajib diisi!');
+                return;
+            }
+            
+            // Format number to currency
+            const formatter = new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR'
+            });
+            
+            const formattedAmount = formatter.format(jumlah);
+            
+            // Kirim form menggunakan Formspree
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if(response.ok) {
+                    alert('Laporan pendapatan berhasil dikirim!');
+                    this.reset();
+                } else {
+                    throw new Error('Gagal mengirim laporan');
+                }
+            })
+            .catch(error => {
+                alert('Terjadi kesalahan: ' + error.message);
+            });
+        });
+        
+        // Set default date to today
+        document.getElementById('tanggal').valueAsDate = new Date();
+    </script>
+</body>
+</html>
