@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <title>Galeri Anak Devil | DEVIL REIGN</title>
+  <meta name="description" content="Galeri foto anggota DEVIL REIGN - Komunitas eksklusif Hotel Hideaway">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --devil-red: #FF3B30;
+      --devil-red-dark: #D70015;
+      --devil-red-light: #FF453A;
+      --bg: #000000;
+      --surface: rgba(28, 28, 30, 0.8);
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #FFFFFF;
+      --text-secondary: rgba(255, 255, 255, 0.7);
+      --text-tertiary: rgba(255, 255, 255, 0.5);
+      --blur: blur(40px) saturate(180%);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; line-height: 1.6; }
+
+    .bg-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; overflow: hidden; }
+    .blob { position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.5; animation: blobFloat 20s ease-in-out infinite; }
+    .blob-1 { width: 600px; height: 600px; background: radial-gradient(circle, var(--devil-red) 0%, transparent 70%); top: -200px; right: -150px; }
+    .blob-2 { width: 500px; height: 500px; background: radial-gradient(circle, #8B0000 0%, transparent 70%); bottom: -150px; left: -150px; animation-delay: -7s; }
+    .blob-3 { width: 400px; height: 400px; background: radial-gradient(circle, #FF453A 0%, transparent 70%); top: 50%; left: 30%; animation-delay: -14s; }
+    @keyframes blobFloat { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(30px, -20px) scale(1.1); } 66% { transform: translate(-20px, 30px) scale(0.9); } }
+
+    .glass { background: var(--surface); backdrop-filter: var(--blur); -webkit-backdrop-filter: var(--blur); border: 1px solid var(--border); border-radius: 24px; }
+    .container { max-width: 480px; margin: 0 auto; padding: 20px 16px 40px; }
+
+    .floating-nav { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 100; display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: rgba(28, 28, 30, 0.9); backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 50px; box-shadow: var(--shadow); animation: navSlideDown 0.6s ease-out; }
+    @keyframes navSlideDown { from { opacity: 0; transform: translateX(-50%) translateY(-20px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+    .nav-logo { width: 36px; height: 36px; background: linear-gradient(135deg, var(--devil-red) 0%, var(--devil-red-dark) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; color: white; }
+    .nav-links { display: flex; gap: 8px; }
+    .nav-link { padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-secondary); text-decoration: none; transition: var(--transition); }
+    .nav-link:hover, .nav-link.active { background: rgba(255, 255, 255, 0.1); color: var(--text); }
+    .nav-link.active { background: linear-gradient(135deg, var(--devil-red) 0%, var(--devil-red-dark) 100%); color: white; }
+
+    .back-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); border-radius: 14px; color: var(--text); font-size: 14px; font-weight: 600; text-decoration: none; margin: 80px 0 24px; transition: var(--transition); }
+    .back-btn:hover { background: rgba(255, 255, 255, 0.1); transform: translateX(-4px); }
+
+    .hero { text-align: center; padding: 40px 24px; margin-bottom: 28px; position: relative; overflow: hidden; animation: heroFadeIn 0.8s ease-out; }
+    @keyframes heroFadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-icon { width: 80px; height: 80px; background: linear-gradient(135deg, var(--devil-red) 0%, var(--devil-red-dark) 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; box-shadow: 0 10px 40px rgba(255, 59, 48, 0.4); animation: iconPulse 2s ease-in-out infinite; }
+    @keyframes iconPulse { 0%, 100% { transform: scale(1); box-shadow: 0 10px 40px rgba(255, 59, 48, 0.4); } 50% { transform: scale(1.05); box-shadow: 0 15px 50px rgba(255, 59, 48, 0.6); } }
+    .hero-icon svg { width: 40px; height: 40px; color: white; }
+    .hero-title { font-size: 36px; font-weight: 900; line-height: 1.1; margin-bottom: 12px; background: linear-gradient(135deg, #fff 0%, var(--devil-red-light) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-subtitle { font-size: 15px; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.6; }
+    .hero-stats { display: flex; justify-content: center; gap: 32px; }
+    .stat-item { text-align: center; }
+    .stat-number { font-size: 28px; font-weight: 800; background: linear-gradient(135deg, var(--devil-red-light) 0%, var(--devil-red) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .stat-label { font-size: 12px; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .filter-section { margin-bottom: 24px; }
+    .filter-title { font-size: 14px; font-weight: 600; color: var(--text-secondary); margin-bottom: 12px; text-align: center; }
+    .filter-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+    .filter-btn { padding: 10px 20px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); border-radius: 25px; font-size: 13px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: var(--transition); }
+    .filter-btn:hover { background: rgba(255, 255, 255, 0.1); color: var(--text); }
+    .filter-btn.active { background: linear-gradient(135deg, var(--devil-red) 0%, var(--devil-red-dark) 100%); color: white; border-color: transparent; }
+
+    .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 32px; }
+    .gallery-item { position: relative; aspect-ratio: 1; background: rgba(255, 255, 255, 0.05); border-radius: 20px; overflow: hidden; border: 1px solid var(--border); cursor: pointer; transition: var(--transition); animation: itemFadeIn 0.6s ease-out; }
+    @keyframes itemFadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+    .gallery-item:hover { transform: translateY(-5px) scale(1.02); border-color: rgba(255, 59, 48, 0.4); box-shadow: 0 15px 40px rgba(255, 59, 48, 0.2); }
+    .gallery-item.hidden { display: none; }
+
+    .gallery-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(145deg, rgba(255, 59, 48, 0.1) 0%, rgba(139, 0, 0, 0.1) 100%); }
+    .gallery-avatar { width: 60px; height: 60px; background: linear-gradient(135deg, var(--devil-red) 0%, var(--devil-red-dark) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; font-size: 24px; font-weight: 800; color: white; }
+    .gallery-name { font-size: 14px; font-weight: 700; color: var(--text); text-align: center; padding: 0 8px; }
+    .gallery-role { font-size: 11px; color: var(--devil-red-light); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+
+    .gallery-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 16px; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%); opacity: 0; transition: var(--transition); }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .overlay-name { font-size: 14px; font-weight: 700; color: white; }
+    .overlay-role { font-size: 12px; color: var(--devil-red-light); }
+
+    .member-card { display: flex; align-items: center; gap: 16px; padding: 20px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 20px; margin-bottom: 12px; transition: var(--transition); }
+    .member-card:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 59, 48, 0.3); transform: translateX(5px); }
+    .member-avatar { width: 56px; height: 56px; background: linear-gradient(135deg, var(--devil-red) 0%, var(--devil-red-dark) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: white; flex-shrink: 0; }
+    .member-info { flex: 1; }
+    .member-name { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .member-role { font-size: 13px; color: var(--devil-red-light); margin-bottom: 4px; }
+    .member-bio { font-size: 12px; color: var(--text-tertiary); line-height: 1.4; }
+    .member-badge { padding: 4px 10px; background: rgba(255, 59, 48, 0.15); border: 1px solid rgba(255, 59, 48, 0.3); border-radius: 12px; font-size: 10px; font-weight: 700; color: var(--devil-red-light); text-transform: uppercase; }
+
+    .section-title { font-size: 20px; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+    .section-title-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--devil-red) 0%, var(--devil-red-dark) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+    .section-title-icon svg { width: 20px; height: 20px; color: white; }
+
+    .join-section { padding: 32px 24px; text-align: center; margin-bottom: 32px; position: relative; overflow: hidden; }
+    .join-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--devil-red), var(--devil-red-dark)); }
+    .join-title { font-size: 24px; font-weight: 800; margin-bottom: 12px; }
+    .join-subtitle { font-size: 14px; color: var(--text-tertiary); margin-bottom: 24px; }
+    .join-btn { display: inline-flex; align-items: center; gap: 10px; padding: 18px 32px; background: linear-gradient(135deg, var(--devil-red) 0%, var(--devil-red-dark) 100%); border: none; border-radius: 16px; color: white; font-size: 15px; font-weight: 700; text-decoration: none; transition: var(--transition); box-shadow: 0 8px 30px rgba(255, 59, 48, 0.4); }
+    .join-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(255, 59, 48, 0.5); }
+
+    .footer { text-align: center; padding: 32px 24px; border-top: 1px solid var(--border); }
+    .footer-logo { font-size: 24px; font-weight: 900; background: linear-gradient(135deg, var(--devil-red) 0%, var(--devil-red-dark) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; }
+    .footer-tagline { font-size: 13px; color: var(--text-tertiary); margin-bottom: 16px; }
+    .footer-credit { font-size: 12px; color: var(--text-tertiary); }
+    .footer-credit span { color: var(--devil-red-light); animation: heartBeat 1.5s ease-in-out infinite; display: inline-block; }
+    @keyframes heartBeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
+
+    .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(20px); z-index: 1000; display: none; align-items: center; justify-content: center; padding: 20px; }
+    .lightbox.active { display: flex; }
+    .lightbox-content { position: relative; max-width: 400px; width: 100%; text-align: center; }
+    .lightbox-close { position: absolute; top: -50px; right: 0; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.1); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
+    .lightbox-close:hover { background: rgba(255, 59, 48, 0.3); border-color: var(--devil-red); }
+    .lightbox-close svg { width: 20px; height: 20px; color: white; }
+    .lightbox-avatar { width: 150px; height: 150px; background: linear-gradient(135deg, var(--devil-red) 0%, var(--devil-red-dark) 100%); border-radius: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 60px; font-weight: 800; color: white; box-shadow: 0 20px 60px rgba(255, 59, 48, 0.4); }
+    .lightbox-name { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+    .lightbox-role { font-size: 16px; color: var(--devil-red-light); margin-bottom: 16px; }
+    .lightbox-bio { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; }
+    .lightbox-stats { display: flex; justify-content: center; gap: 32px; }
+    .lightbox-stat { text-align: center; }
+    .lightbox-stat-value { font-size: 20px; font-weight: 700; color: white; }
+    .lightbox-stat-label { font-size: 11px; color: var(--text-tertiary); text-transform: uppercase; }
+
+    @media (max-width: 400px) { .hero-title { font-size: 30px; } .gallery-grid { gap: 10px; } .stat-number { font-size: 24px; } }
+  </style>
+</head>
+<body>
+  <div class="bg-container">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <nav class="floating-nav">
+    <div class="nav-logo">D</div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="iklan.html" class="nav-link">Jasa</a>
+      <a href="galeri.html" class="nav-link active">Galeri</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <a href="index.html" class="back-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Kembali
+    </a>
+
+    <section class="hero glass">
+      <div class="hero-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h1 class="hero-title">Galeri Anak Devil</h1>
+      <p class="hero-subtitle">Kenali para anggota DEVIL REIGN - komunitas eksklusif Hotel Hideaway yang penuh semangat dan loyalitas</p>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-number" id="totalMembers">12</div><div class="stat-label">Members</div></div>
+        <div class="stat-item"><div class="stat-number">6</div><div class="stat-label">Admin</div></div>
+        <div class="stat-item"><div class="stat-number">∞</div><div class="stat-label">Bond</div></div>
+      </div>
+    </section>
+
+    <div class="filter-section">
+      <div class="filter-title">Filter berdasarkan:</div>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="admin">Admin</button>
+        <button class="filter-btn" data-filter="member">Member</button>
+        <button class="filter-btn" data-filter="founder">Founder</button>
+      </div>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Gallery items will be generated by JavaScript -->
+    </div>
+
+    <h2 class="section-title">
+      <div class="section-title-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      Member Destacados
+    </h2>
+
+    <div id="featuredMembers">
+      <!-- Featured members will be generated by JavaScript -->
+    </div>
+
+    <div class="join-section glass">
+      <h2 class="join-title">Ingin Bergabung?</h2>
+      <p class="join-subtitle">Jadilah bagian dari keluarga DEVIL REIGN dan rasakan kekuatan bersama</p>
+      <a href="index.html" class="join-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        Daftar Sekarang
+      </a>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-logo">DEVIL REIGN</div>
+      <p class="footer-tagline">Satu Reign, Satu Kekuasaan</p>
+      <p class="footer-credit">Crafted with <span>♥</span> by Hironi</p>
+    </footer>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <div class="lightbox-close" onclick="closeLightbox()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </div>
+      <div class="lightbox-avatar" id="lightboxAvatar">D</div>
+      <h3 class="lightbox-name" id="lightboxName">Devil Name</h3>
+      <p class="lightbox-role" id="lightboxRole">Admin</p>
+      <p class="lightbox-bio" id="lightboxBio">Bio member akan ditampilkan di sini.</p>
+      <div class="lightbox-stats">
+        <div class="lightbox-stat"><div class="lightbox-stat-value" id="lightboxJoin">2024</div><div class="lightbox-stat-label">Bergabung</div></div>
+        <div class="lightbox-stat"><div class="lightbox-stat-value" id="lightboxLevel">50</div><div class="lightbox-stat-label">Level</div></div>
+        <div class="lightbox-stat"><div class="lightbox-stat-value" id="lightboxStatus">Aktif</div><div class="lightbox-stat-label">Status</div></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const members = [
+      { id: 1, name: 'Hironi', role: 'founder', roleLabel: 'Founder', initial: 'H', bio: 'Pendiri DEVIL REIGN. Visioner dan pemimpin yang membawa komunitas ini ke level tertinggi.', join: '2023', level: 99, status: 'Aktif' },
+      { id: 2, name: 'DevilQueen', role: 'admin', roleLabel: 'Admin', initial: 'DQ', bio: 'Admin utama yang mengatur jalannya komunitas dengan penuh dedikasi.', join: '2023', level: 85, status: 'Aktif' },
+      { id: 3, name: 'ShadowKing', role: 'admin', roleLabel: 'Admin', initial: 'SK', bio: 'Spesialis event dan turnamen. Selalu siap membantu member baru.', join: '2023', level: 82, status: 'Aktif' },
+      { id: 4, name: 'NightRaven', role: 'admin', roleLabel: 'Admin', initial: 'NR', bio: 'Ahli strategi dan diplomat komunitas. Jembatan antar member.', join: '2024', level: 78, status: 'Aktif' },
+      { id: 5, name: 'DarkPhoenix', role: 'member', roleLabel: 'Member', initial: 'DP', bio: 'Member aktif yang selalu berkontribusi dalam setiap event.', join: '2024', level: 65, status: 'Aktif' },
+      { id: 6, name: 'BloodMoon', role: 'member', roleLabel: 'Member', initial: 'BM', bio: 'Pemain berbakat dengan skill yang mengagumkan.', join: '2024', level: 70, status: 'Aktif' },
+      { id: 7, name: 'Crimson', role: 'member', roleLabel: 'Member', initial: 'C', bio: 'Selalu ceria dan membawa suasana positif di komunitas.', join: '2024', level: 58, status: 'Aktif' },
+      { id: 8, name: 'VoidWalker', role: 'member', roleLabel: 'Member', initial: 'VW', bio: 'Misterius tapi sangat loyal terhadap DEVIL REIGN.', join: '2024', level: 62, status: 'Aktif' },
+    ];
+
+    function renderGallery(filter = 'all') {
+      const grid = document.getElementById('galleryGrid');
+      grid.innerHTML = '';
+      
+      const filtered = filter === 'all' ? members : members.filter(m => m.role === filter);
+      
+      filtered.forEach((member, index) => {
+        const item = document.createElement('div');
+        item.className = 'gallery-item';
+        item.style.animationDelay = `${index * 0.1}s`;
+        item.onclick = () => openLightbox(member);
+        
+        item.innerHTML = `
+          <div class="gallery-placeholder">
+            <div class="gallery-avatar">${member.initial}</div>
+            <div class="gallery-name">${member.name}</div>
+            <div class="gallery-role">${member.roleLabel}</div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="overlay-name">${member.name}</div>
+            <div class="overlay-role">${member.roleLabel}</div>
+          </div>
+        `;
+        
+        grid.appendChild(item);
+      });
+      
+      document.getElementById('totalMembers').textContent = filtered.length;
+    }
+
+    function renderFeatured() {
+      const container = document.getElementById('featuredMembers');
+      const featured = members.filter(m => m.role === 'admin' || m.role === 'founder');
+      
+      featured.forEach(member => {
+        const card = document.createElement('div');
+        card.className = 'member-card';
+        card.onclick = () => openLightbox(member);
+        
+        card.innerHTML = `
+          <div class="member-avatar">${member.initial}</div>
+          <div class="member-info">
+            <div class="member-name">${member.name}</div>
+            <div class="member-role">${member.roleLabel}</div>
+            <div class="member-bio">${member.bio}</div>
+          </div>
+          <span class="member-badge">${member.role === 'founder' ? 'Founder' : 'Admin'}</span>
+        `;
+        
+        container.appendChild(card);
+      });
+    }
+
+    function openLightbox(member) {
+      document.getElementById('lightboxAvatar').textContent = member.initial;
+      document.getElementById('lightboxName').textContent = member.name;
+      document.getElementById('lightboxRole').textContent = member.roleLabel;
+      document.getElementById('lightboxBio').textContent = member.bio;
+      document.getElementById('lightboxJoin').textContent = member.join;
+      document.getElementById('lightboxLevel').textContent = member.level;
+      document.getElementById('lightboxStatus').textContent = member.status;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        renderGallery(this.dataset.filter);
+      });
+    });
+
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    renderGallery();
+    renderFeatured();
+
+    console.log('%c DEVIL REIGN GALLERY ', 'background: linear-gradient(135deg, #FF3B30, #D70015); color: white; font-size: 24px; font-weight: bold; padding: 10px 20px; border-radius: 10px;');
+    console.log('%c Galeri Anak Devil ', 'color: #FF3B30; font-size: 14px;');
+  </script>
+</body>
+</html>
