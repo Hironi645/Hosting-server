@@ -623,6 +623,92 @@ document.addEventListener('touchend', (e) => {
   }
   lastTouchEnd = now;
 }, false);
+// ===== DELAYED ADVERTISEMENT BANNER =====
+// Menampilkan iklan setelah 5 detik
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Sembunyikan banner iklan saat pertama kali load
+  const adBanner = document.getElementById('adBanner');
+  if (adBanner) {
+    adBanner.style.display = 'none';
+    
+    // Tampilkan iklan setelah 5 detik
+    setTimeout(function() {
+      adBanner.style.display = 'block';
+      
+      // Animasi fade in
+      adBanner.style.animation = 'none';
+      adBanner.offsetHeight; // Trigger reflow
+      adBanner.style.animation = 'adSlideDown 0.6s ease-out';
+      
+      // Haptic feedback jika tersedia
+      if (navigator.vibrate) {
+        navigator.vibrate(20);
+      }
+      
+      // Kirim event ke Google Analytics jika ada
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'ad_shown', {
+          'event_category': 'advertisement',
+          'event_label': 'jasa_pembuatan_website',
+          'value': 5000
+        });
+      }
+      
+      console.log('%c [IKLAN] Banner ditampilkan setelah 5 detik ', 'background: #007AFF; color: white; font-size: 12px; padding: 4px 8px; border-radius: 4px;');
+    }, 5000); // 5000ms = 5 detik
+  }
+});
+
+// ===== INTERAKSI IKLAN YANG LEBIH BAIK =====
+// Menambahkan efek saat iklan diklik
+
+document.addEventListener('DOMContentLoaded', function() {
+  const adBanner = document.getElementById('adBanner');
+  if (adBanner) {
+    adBanner.addEventListener('click', function(e) {
+      // Haptic feedback
+      if (navigator.vibrate) {
+        navigator.vibrate([10, 20, 10]);
+      }
+      
+      // Animasi klik
+      this.style.transform = 'scale(0.98)';
+      setTimeout(() => {
+        this.style.transform = 'scale(1)';
+      }, 200);
+      
+      // Simpan ke localStorage bahwa user pernah klik iklan
+      localStorage.setItem('hironi_ad_clicked', new Date().toISOString());
+      
+      console.log('%c [IKLAN] Diklik oleh user ', 'background: #34C759; color: white; font-size: 12px; padding: 4px 8px; border-radius: 4px;');
+    });
+  }
+});
+
+// ===== FUNGSI UNTUK TESTING IKLAN =====
+// Bisa dipanggil dari console untuk testing
+
+function showAdNow() {
+  const adBanner = document.getElementById('adBanner');
+  if (adBanner) {
+    adBanner.style.display = 'block';
+    adBanner.style.animation = 'adSlideDown 0.6s ease-out';
+    console.log('%c [TEST] Iklan ditampilkan secara manual ', 'background: #FF9500; color: white; font-size: 12px; padding: 4px 8px; border-radius: 4px;');
+  }
+}
+
+function hideAdNow() {
+  const adBanner = document.getElementById('adBanner');
+  if (adBanner) {
+    adBanner.style.display = 'none';
+    console.log('%c [TEST] Iklan disembunyikan ', 'background: #FF3B30; color: white; font-size: 12px; padding: 4px 8px; border-radius: 4px;');
+  }
+}
+
+// Export fungsi ke window agar bisa dipanggil dari console
+window.showAdNow = showAdNow;
+window.hideAdNow = hideAdNow;
 
 // ===== Console branding =====
 console.log('%c DEVIL REIGN ', 'background: linear-gradient(135deg, #FF3B30, #D70015); color: white; font-size: 24px; font-weight: bold; padding: 10px 20px; border-radius: 10px;');
