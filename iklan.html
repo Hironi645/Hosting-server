@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <title>Jasa Pembuatan Website | by HIRONI</title>
+  <meta name="title" content="Jasa Pembuatan Website | by HIRONI">
+  <meta name="description" content="Jasa pembuatan website profesional dengan desain modern dan harga terjangkau.">
+  <meta name="keywords" content="Jasa Website, Web Developer, Pembuatan Website, Hironi, Website Murah">
+  <meta name="author" content="Hironi">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://devilreign.com/iklan.html">
+  <meta property="og:title" content="Jasa Pembuatan Website | by HIRONI">
+  <meta property="og:description" content="Jasa pembuatan website profesional dengan desain modern dan harga terjangkau.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop">
+  <meta property="og:site_name" content="HIRONI Web Services">
+  <meta property="og:locale" content="id_ID">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #007AFF;
+      --primary-light: #5AC8FA;
+      --primary-dark: #5856D6;
+      --accent: #AF52DE;
+      --success: #34C759;
+      --warning: #FF9500;
+      --bg: #000000;
+      --surface: rgba(28, 28, 30, 0.8);
+      --surface-solid: #1C1C1E;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #FFFFFF;
+      --text-secondary: rgba(255, 255, 255, 0.7);
+      --text-tertiary: rgba(255, 255, 255, 0.5);
+      --text-muted: rgba(255, 255, 255, 0.4);
+      --blur: blur(40px) saturate(180%);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+      --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, var(--accent) 100%);
+      --gradient-success: linear-gradient(135deg, #34C759 0%, #30B34E 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    .bg-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      overflow: hidden;
+    }
+
+    .gradient-blobs {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.5;
+      animation: blobFloat 20s ease-in-out infinite;
+    }
+
+    .blob-1 {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+      top: -200px;
+      right: -150px;
+    }
+
+    .blob-2 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--primary-dark) 0%, transparent 70%);
+      bottom: -150px;
+      left: -150px;
+      animation-delay: -7s;
+    }
+
+    .blob-3 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+      top: 50%;
+      left: 30%;
+      animation-delay: -14s;
+    }
+
+    @keyframes blobFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -20px) scale(1.1); }
+      66% { transform: translate(-20px, 30px) scale(0.9); }
+    }
+
+    .noise {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .glass {
+      background: var(--surface);
+      backdrop-filter: var(--blur);
+      -webkit-backdrop-filter: var(--blur);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+    }
+
+    .glass-card {
+      background: rgba(28, 28, 30, 0.7);
+      backdrop-filter: var(--blur);
+      -webkit-backdrop-filter: var(--blur);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      transition: var(--transition);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(0, 122, 255, 0.3);
+      background: rgba(28, 28, 30, 0.8);
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: var(--transition);
+    }
+
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(-4px);
+    }
+
+    .back-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 24px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: linear-gradient(135deg, rgba(0, 122, 255, 0.2) 0%, rgba(175, 82, 222, 0.2) 100%);
+      border: 1px solid rgba(0, 122, 255, 0.3);
+      border-radius: 20px;
+      margin-bottom: 24px;
+      animation: badgePulse 2s ease-in-out infinite;
+    }
+
+    @keyframes badgePulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.4); }
+      50% { box-shadow: 0 0 20px 5px rgba(0, 122, 255, 0.2); }
+    }
+
+    .hero-badge-icon {
+      width: 16px;
+      height: 16px;
+      color: var(--primary-light);
+    }
+
+    .hero-badge-text {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-title {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #fff 0%, var(--primary-light) 50%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 32px;
+      background: var(--gradient-primary);
+      border: none;
+      border-radius: 16px;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 8px 32px rgba(0, 122, 255, 0.4);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: 0.6s;
+    }
+
+    .hero-cta:hover::before {
+      left: 100%;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0, 122, 255, 0.5);
+    }
+
+    .hero-cta svg {
+      width: 20px;
+      height: 20px;
+      animation: ctaArrow 1.5s ease-in-out infinite;
+    }
+
+    @keyframes ctaArrow {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(4px); }
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-title-icon svg {
+      width: 18px;
+      height: 18px;
+      color: white;
+    }
+
+    .services-grid {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .service-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(0, 122, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .service-icon svg {
+      width: 26px;
+      height: 26px;
+      color: white;
+    }
+
+    .service-content {
+      flex: 1;
+    }
+
+    .service-name {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .service-desc {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+
+    /* ===== GALLERY SECTION ===== */
+    .gallery-grid {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .gallery-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover {
+      border-color: rgba(0, 122, 255, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-content {
+      padding: 16px 20px;
+    }
+
+    .gallery-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .gallery-desc {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      line-height: 1.5;
+    }
+
+    /* ===== PRICING SECTION - REDESIGNED ===== */
+    .pricing-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .pricing-card {
+      background: rgba(28, 28, 30, 0.7);
+      backdrop-filter: var(--blur);
+      -webkit-backdrop-filter: var(--blur);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 122, 255, 0.3);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .pricing-card.popular {
+      border: 1px solid rgba(0, 122, 255, 0.4);
+      background: rgba(0, 122, 255, 0.05);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .popular-badge::before {
+      content: '⭐';
+      font-size: 10px;
+    }
+
+    .pricing-header {
+      margin-bottom: 20px;
+    }
+
+    .pricing-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary-light);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    .pricing-price-wrapper {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .pricing-price-currency {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-secondary);
+    }
+
+    .pricing-price {
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, #fff 0%, var(--primary-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .pricing-price-period {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      margin-left: 4px;
+    }
+
+    .pricing-note {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      margin-top: 8px;
+    }
+
+    .pricing-features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .pricing-feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: 4px 0;
+    }
+
+    .pricing-feature-icon {
+      width: 22px;
+      height: 22px;
+      background: rgba(52, 199, 89, 0.15);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .pricing-feature-icon svg {
+      width: 14px;
+      height: 14px;
+      color: var(--success);
+    }
+
+    .pricing-feature-text {
+      flex: 1;
+    }
+
+    .pricing-feature-highlight {
+      font-weight: 700;
+      color: var(--primary-light);
+    }
+
+    .pricing-cta-wrapper {
+      margin-top: 8px;
+    }
+
+    .pricing-cta {
+      width: 100%;
+      padding: 16px 24px;
+      background: var(--gradient-primary);
+      border: none;
+      border-radius: 16px;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.6s;
+    }
+
+    .pricing-cta:hover::before {
+      left: 100%;
+    }
+
+    .pricing-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 122, 255, 0.4);
+    }
+
+    .pricing-cta.popular {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      box-shadow: 0 8px 24px rgba(175, 82, 222, 0.4);
+    }
+
+    .pricing-cta svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .pricing-compare {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+
+    .pricing-compare a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ===== WHY CHOOSE US ===== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .why-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 20px 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      transition: var(--transition);
+    }
+
+    .why-item:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(0, 122, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .why-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--success) 0%, #248A3D 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .why-icon svg {
+      width: 22px;
+      height: 22px;
+      color: white;
+    }
+
+    .why-content h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .why-content p {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      line-height: 1.5;
+    }
+
+    /* ===== CONTACT CARD ===== */
+    .contact-card {
+      padding: 32px 24px;
+      text-align: center;
+      margin-bottom: 32px;
+      background: linear-gradient(135deg, rgba(0, 122, 255, 0.1) 0%, rgba(175, 82, 222, 0.1) 100%);
+    }
+
+    .contact-title {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .contact-subtitle {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      margin-bottom: 28px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 24px;
+      border-radius: 16px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .contact-btn.whatsapp {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: white;
+    }
+
+    .contact-btn.whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+    }
+
+    .contact-btn.telegram {
+      background: linear-gradient(135deg, #0088cc 0%, #005885 100%);
+      color: white;
+    }
+
+    .contact-btn.telegram:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 136, 204, 0.4);
+    }
+
+    .contact-btn svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-logo {
+      font-size: 24px;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-bottom: 16px;
+    }
+
+    .footer-credit {
+      font-size: 12px;
+      color: var(--text-tertiary);
+    }
+
+    .footer-credit span {
+      color: var(--primary-light);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero, .services-grid, .gallery-grid, .pricing-card, .why-grid, .contact-card {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 400px) {
+      .hero-title {
+        font-size: 28px;
+      }
+
+      .pricing-price {
+        font-size: 40px;
+      }
+      
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .popular-badge {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 16px;
+        display: inline-block;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 520px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-container">
+    <div class="gradient-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="noise"></div>
+  </div>
+
+  <div class="container">
+    <a href="index.html" class="back-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Kembali
+    </a>
+
+    <section class="hero glass">
+      <div class="hero-badge">
+        <svg class="hero-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        <span class="hero-badge-text">Professional Service</span>
+      </div>
+      <h1 class="hero-title">Jasa Pembuatan Website</h1>
+      <p class="hero-subtitle">Website profesional dengan desain modern, responsif, dan harga terjangkau. Wujudkan ide Anda menjadi website yang menakjubkan!</p>
+      <a href="#pricing" class="hero-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+        Hubungi Saya
+      </a>
+    </section>
+
+    <h2 class="section-title">
+      <div class="section-title-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+      </div>
+      Layanan
+    </h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <div class="service-content">
+          <h3 class="service-name">Company Profile</h3>
+          <p class="service-desc">Website perusahaan profesional untuk memperkenalkan bisnis Anda</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"/>
+            <circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+        </div>
+        <div class="service-content">
+          <h3 class="service-name">Toko Online</h3>
+          <p class="service-desc">E-commerce dengan sistem pemesanan dan pembayaran</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 20h9"/>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
+        </div>
+        <div class="service-content">
+          <h3 class="service-name">Landing Page</h3>
+          <p class="service-desc">Halaman promosi yang menarik untuk konversi tinggi</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div class="service-content">
+          <h3 class="service-name">Portfolio Pribadi</h3>
+          <p class="service-desc">Tampilkan karya dan keahlian Anda secara profesional</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <h2 class="section-title">
+      <div class="section-title-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21 15 16 10 5 21"/>
+        </svg>
+      </div>
+      Galeri Project
+    </h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop" alt="Company Profile Website" class="gallery-image">
+        <div class="gallery-content">
+          <h3 class="gallery-title">Company Profile</h3>
+          <p class="gallery-desc">Website perusahaan profesional dengan desain modern dan elegan</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=450&fit=crop" alt="E-Commerce Website" class="gallery-image">
+        <div class="gallery-content">
+          <h3 class="gallery-title">Toko Online</h3>
+          <p class="gallery-desc">Platform e-commerce lengkap dengan sistem pembayaran terintegrasi</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=450&fit=crop" alt="Landing Page" class="gallery-image">
+        <div class="gallery-content">
+          <h3 class="gallery-title">Landing Page</h3>
+          <p class="gallery-desc">Halaman promosi yang menarik untuk konversi tinggi</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&h=450&fit=crop" alt="Portfolio Website" class="gallery-image">
+        <div class="gallery-content">
+          <h3 class="gallery-title">Portfolio Pribadi</h3>
+          <p class="gallery-desc">Tampilkan karya dan keahlian Anda secara profesional</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title" id="pricing">
+      <div class="section-title-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+          <line x1="3" y1="9" x2="21" y2="9"/>
+          <line x1="9" y1="21" x2="9" y2="9"/>
+        </svg>
+      </div>
+      Paket Harga
+    </h2>
+
+    <div class="pricing-section">
+      <!-- Paket Basic -->
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <div class="pricing-label">Paket Basic</div>
+          <div class="pricing-price-wrapper">
+            <span class="pricing-price-currency">Rp</span>
+            <span class="pricing-price">560.000</span>
+          </div>
+          <p class="pricing-note">Cocok untuk website sederhana</p>
+        </div>
+        
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text">3 Halaman Website</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text">Desain Responsif</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text"><span class="pricing-feature-highlight">1x</span> Revisi</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text"><span class="pricing-feature-highlight">7 Hari</span> Support</span>
+          </div>
+        </div>
+
+        <div class="pricing-cta-wrapper">
+          <a href="https://wa.me/6285119654305?text=Halo%20Hironi%2C%20saya%20tertarik%20dengan%20Paket%20Basic%20Rp%20560.000.%20Bisa%20konsultasi%3F" class="pricing-cta" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            Pesan Sekarang
+          </a>
+        </div>
+      </div>
+
+      <!-- Paket Standard - POPULER -->
+      <div class="pricing-card popular">
+        <div class="popular-badge">Paling Laris</div>
+        <div class="pricing-header">
+          <div class="pricing-label">Paket Standard</div>
+          <div class="pricing-price-wrapper">
+            <span class="pricing-price-currency">Rp</span>
+            <span class="pricing-price">900.000</span>
+          </div>
+          <p class="pricing-note">Pilihan terbaik untuk bisnis</p>
+        </div>
+        
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text">5-7 Halaman Website</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text">Desain Modern & Responsif</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text">Optimasi SEO Dasar</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text"><span class="pricing-feature-highlight">3x</span> Revisi</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text"><span class="pricing-feature-highlight">14 Hari</span> Support</span>
+          </div>
+        </div>
+
+        <div class="pricing-cta-wrapper">
+          <a href="https://wa.me/6285119654305?text=Halo%20Hironi%2C%20saya%20tertarik%20dengan%20Paket%20Standard%20Rp%20900.000.%20Bisa%20konsultasi%3F" class="pricing-cta popular" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            Pesan Sekarang
+          </a>
+        </div>
+      </div>
+
+      <!-- Paket Premium -->
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <div class="pricing-label">Paket Premium</div>
+          <div class="pricing-price-wrapper">
+            <span class="pricing-price-currency">Rp</span>
+            <span class="pricing-price">1.500.000</span>
+          </div>
+          <p class="pricing-note">Solusi lengkap untuk profesional</p>
+        </div>
+        
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text">10+ Halaman Website</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text">Desain Premium Custom</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text">Fitur Lengkap & Animasi</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text"><span class="pricing-feature-highlight">Unlimited</span> Revisi</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text"><span class="pricing-feature-highlight">30 Hari</span> Support</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span class="pricing-feature-text">Free Domain & Hosting <span class="pricing-feature-highlight">1 Tahun</span></span>
+          </div>
+        </div>
+
+        <div class="pricing-cta-wrapper">
+          <a href="https://wa.me/6285119654305?text=Halo%20Hironi%2C%20saya%20tertarik%20dengan%20Paket%20Premium%20Rp%201.500.000.%20Bisa%20konsultasi%3F" class="pricing-cta" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            Pesan Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-compare">
+      Butuh paket custom? <a href="#contact">Hubungi saya</a> untuk penawaran khusus
+    </div>
+
+    <h2 class="section-title">
+      <div class="section-title-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </div>
+      Kenapa Pilih Saya?
+    </h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="why-content">
+          <h4>Pengerjaan Cepat</h4>
+          <p>Website selesai dalam waktu 3-7 hari kerja</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="why-content">
+          <h4>Garansi Keamanan</h4>
+          <p>Data dan website Anda aman</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <div class="why-content">
+          <h4>Konsultasi Gratis</h4>
+          <p>Diskusikan kebutuhan tanpa biaya</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+            <line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+        </div>
+        <div class="why-content">
+          <h4>Harga Terjangkau</h4>
+          <p>Kualitas premium harga bersahabat</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-card glass" id="contact">
+      <h2 class="contact-title">Mulai Project Anda</h2>
+      <p class="contact-subtitle">Hubungi saya sekarang untuk konsultasi gratis</p>
+      <div class="contact-buttons">
+        <a href="https://wa.me/6285119654305?text=Halo%20Hironi%2C%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20Anda.%20Bisa%20konsultasi%3F" class="contact-btn whatsapp" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Chat WhatsApp
+        </a>
+        <a href="https://t.me/hironi_dev" class="contact-btn telegram" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+          </svg>
+          Telegram
+        </a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-logo">HIRONI</div>
+      <p class="footer-tagline">Web Developer & Designer</p>
+      <p class="footer-credit">Crafted with <span>♥</span> by Hironi</p>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+        }
+      });
+    });
+
+    console.log('%c HIRONI WEB SERVICES ', 'background: linear-gradient(135deg, #007AFF, #AF52DE); color: white; font-size: 24px; font-weight: bold; padding: 10px 20px; border-radius: 10px;');
+    console.log('%c Jasa Pembuatan Website Profesional ', 'color: #007AFF; font-size: 14px;');
+    console.log('%c Hubungi: 0851-1965-4305 ', 'color: #34C759; font-size: 12px;');
+  </script>
+</body>
+</html>
