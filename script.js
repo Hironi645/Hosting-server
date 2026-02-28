@@ -16,7 +16,7 @@ const adminList = [
   { nomor: "6282157298268", nama: "Admin 4", label: "Hironi | Bot" },
   { nomor: "6289528123306", nama: "Admin 5", label: "RieelTiaar" },
   { nomor: "6285119654305", nama: "Admin 6", label: "Hironi" },
-  { nomor: "62895320390613", nama: "Admin 7", label: "Rima" },
+  { nomor: "62895320390613", nama: "Admin 7", label: "Cimaa" },
   { nomor: "6283142720223", nama: "Admin 8", label: "oguttt" }, 
   { nomor: "6289523827108", nama: "Admin 9", label: "Agung" }, 
   { nomor: "6285155293344", nama: "Admin 10", label: "Cici" }
