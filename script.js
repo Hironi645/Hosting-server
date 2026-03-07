@@ -8,7 +8,7 @@ let tutorialShown = localStorage.getItem('devilReign_tutorialShown') === 'true';
 let isTutorialActive = false;
 
 // ===== GOOGLE APPS SCRIPT CONFIG =====
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwwK7GCv8_fxn9Ni_yfqp4d8I5CiArvD-3bqawiWyhoq-kcHEQlTz0Gy-uF1KrH_dXWZw/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyngWDrUvB7pMwISgbeg2c-RYT-sZVmyoKjjYva2f9DF_eshS1cztyzo80FJm1Y-p6dVQ/exec';
 
 // ===== DATA ADMIN =====
 // Setiap admin memiliki tema warna unik dan inisial untuk avatar
