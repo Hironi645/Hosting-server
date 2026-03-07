@@ -875,7 +875,7 @@ form.addEventListener('submit', async (e) => {
   showProcessing();
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbwYX6crHyAwQ6-DPzIe8dVqiBfqgFOf9v_5lc0O4_wYidCCOOi_4RcSek1XuMgYZk7qlA/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbwwK7GCv8_fxn9Ni_yfqp4d8I5CiArvD-3bqawiWyhoq-kcHEQlTz0Gy-uF1KrH_dXWZw/exec", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData)
