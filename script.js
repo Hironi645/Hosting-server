@@ -13,10 +13,10 @@ const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyngWDrUvB7pM
 // ===== DATA ADMIN =====
 const adminList = [
   { nomor: "6285751316809", nama: "Lyonar Nna", label: "Admin 1", theme: "red", initial: "LN" },
-  { nomor: "6285824168807", nama: "ÐR SanRa", label: "Admin 5", theme: "orange", initial: "ÐS" },
-  { nomor: "6281318685216", nama: "Lucanne", label: "Admin 6", theme: "pink", initial: "LC" },
-  { nomor: "6289504498328", nama: "vhany", label: "Admin 7", theme: "cyan", initial: "VH" },
-  { nomor: "6288991037227", nama: "dika", label: "Admin 8", theme: "purple", initial: "RH" }
+  { nomor: "6285824168807", nama: "ÐR SanRa", label: "Admin 2", theme: "orange", initial: "ÐS" },
+  { nomor: "6281318685216", nama: "Lucanne", label: "Admin 3", theme: "pink", initial: "LC" },
+  { nomor: "6289504498328", nama: "vhany", label: "Admin 4", theme: "cyan", initial: "VH" },
+  { nomor: "6288991037227", nama: "dika", label: "Admin 5", theme: "purple", initial: "RH" }
 ];
 
 const adminThemes = {
